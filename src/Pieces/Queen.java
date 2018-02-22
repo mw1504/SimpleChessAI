@@ -9,7 +9,7 @@ public class Queen extends Pieces {
     }
 
     /**
-     *
+     * A Queen is arguably the strongest piece in chess due to it's ability to move in any direction any amount of spaces.
      * @param spaces positive is the forwards direction of the chosen direction.
      * @param direction number from 0 - 3 representing one of the 4 directions of a Queens movement in a clockwise rotation starting upwards.
      * @return boolean representing whether the move is valid or not
