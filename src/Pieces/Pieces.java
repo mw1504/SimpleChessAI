@@ -25,7 +25,7 @@ public class Pieces {
         return this.coord;
     }
 
-    public void setX(int x) throws IllegalArgumentException {
+    protected void setX(int x) throws IllegalArgumentException {
         if ((x < 0) && (x > 8)) {
             throw new IllegalArgumentException("That move is an invalid move.");
         }
@@ -43,12 +43,12 @@ public class Pieces {
         this.coord = new Pair<>(this.coord.getKey(), y);
     }
 
-    protected int getY() {
+    public int getY() {
         return this.coord.getValue();
     }
 
     @Override
     public String toString() {
-        return this.name + " " + this.colour;
+        return  this.colour + " " + this.name;
     }
 }

@@ -18,12 +18,12 @@ public class Pawn extends Pieces {
         if (firstMove) {
             try {
                 this.setX(this.getX() + 2);
+                firstMove = false;
+                return true;
             } catch (IllegalArgumentException e) {
-                return false;
             }
-            firstMove = false;
-            return true;
         }
+        return false;
     }    
 
     /**
