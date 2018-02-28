@@ -3,7 +3,7 @@ package Pieces;
 import javafx.util.Pair;
 
 
-public class Rook extends Pieces {
+public class Rook extends Piece {
 
     public Rook(String colour, Pair<Integer, Integer> coord) {
         super("Rook", colour, coord);

@@ -2,7 +2,7 @@ package Pieces;
 
 import javafx.util.Pair;
 
-public class Knight extends Pieces {
+public class Knight extends Piece {
 
     public Knight(String colour, Pair<Integer, Integer> coord) {
         super("Knight", colour, coord);

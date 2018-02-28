@@ -2,12 +2,12 @@ package Pieces;
 
 import javafx.util.Pair;
 
-public class Pieces {
+public class Piece {
     private String colour;
     private String name;
     private Pair<Integer, Integer> coord;
 
-    protected Pieces(String name, String colour, Pair<Integer, Integer> coord) {
+    protected Piece(String name, String colour, Pair<Integer, Integer> coord) {
         this.name = name;
         this.colour = colour;
         this.coord = coord;
@@ -26,7 +26,7 @@ public class Pieces {
     }
 
     protected void setX(int x) throws IllegalArgumentException {
-        if ((x < 0) && (x > 8)) {
+        if ((x < 0) || (x > 7)) {
             throw new IllegalArgumentException("That move is an invalid move.");
         }
         this.coord = new Pair<>(x, this.coord.getValue());
@@ -37,7 +37,7 @@ public class Pieces {
     }
 
     protected void setY(int y) throws IllegalArgumentException {
-        if ((y < 0) && (y > 8)) {
+        if ((y < 0) || (y > 7)) {
             throw new IllegalArgumentException("That move is an invalid move.");
         }
         this.coord = new Pair<>(this.coord.getKey(), y);
